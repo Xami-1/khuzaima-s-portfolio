@@ -1,0 +1,144 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header:hover {
+  background: linear-gradient(135deg, #292929, #111);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #bbb;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#intro {
+  background: #1c1c1c;
+  border-top: 2px solid #2c2c2c;
+}
+
+#projects {
+  background: #181818;
+  border-top: 2px solid #2c2c2c;
+}
+
+/* Project Cards */
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #222;
+  border-radius: 8px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+  background: #2c2c2c;
+}
+
+.project-card h3 {
+  color: #ff9800;
+}
+
+/* Footer */
+footer {
+  background: #1f1f1f;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  transition: background 0.5s ease;
+}
+
+footer:hover {
+  background: #111;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    display: block;
+  }
+}

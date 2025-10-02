@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khuzaima's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Khuzaima</h1>
+    <nav>
+      <a href="#intro">About</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>About Me</h2>
+    <p>My name is <strong>Khuzaima</strong>, and I am 17 years old. 
+       I have completed my matriculation in Computer Science, which has given me a basic understanding of technology and communication tools. 
+       I also have some experience that has helped me build strong communication and problem-solving skills.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A simple landing page design with HTML and CSS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>A basic responsive navbar using Flexbox.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>A mock portfolio with hover effects and transitions.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Khuzaima | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple scroll animation for sections
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 300;
+        const height = sec.offsetHeight;
+        if (top >= offset && top < offset + height) {
+          sec.classList.add("visible");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
